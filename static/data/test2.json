@@ -1,0 +1,436 @@
+{
+  "pertanyaan": [
+    {
+      "id": 1,
+      "text": "Apa artinya memiliki penyakit mental?",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 2,
+      "text": "Apa itu penyakit kesehatan mental?",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 3,
+      "text": "Jelaskan penyakit kesehatan mental",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 4,
+      "text": "Definisi mental health",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 5,
+      "text": "Penyakit mental harus kemana?",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 6,
+      "text": "Cara mengetahui kita sakit mental apa?",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 7,
+      "text": "Ciri-ciri kita terkena penyakit mental",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 8,
+      "text": "Berapa biaya ke psikiater?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 9,
+      "text": "Berapa harga ke psikiater?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 10,
+      "text": "Berapa tarif ke psikiater?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 11,
+      "text": "Mengapa kesehatan mental dapat berubah?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 12,
+      "text": "Psikolog harus dipanggil apa?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 13,
+      "text": "Kenapa psikolog lebih mahal dari psikiater?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 14,
+      "text": "Berapa lama kita berobat ke psikiater?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 15,
+      "text": "Mengapa psikiater mahal?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 16,
+      "text": "Penyakit mental Apakah Menular?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 17,
+      "text": "Apa Perbedaan depresi dan gila?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 18,
+      "text": "Bagaimana cara keluar dari depresi?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 19,
+      "text": "Apa nama obat depresi di apotik?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 20,
+      "text": "Jenis-jenis obat untuk depresi",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 21,
+      "text": "Apa perbedaan gangguan jiwa dan gangguan mental?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 22,
+      "text": "Kapan kita harus pergi ke psikiater?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 23,
+      "text": "Mental yang sehat itu seperti apa?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 24,
+      "text": "Apa itu mental sehat?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 25,
+      "text": "Jelaskan apa itu mental sehat",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 26,
+      "text": "Apakah overthinking termasuk gangguan mental?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 27,
+      "text": "Kenapa kita sering menghayal dan berbicara sendiri?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 28,
+      "text": "Bagaimana cara agar tidak terlalu memikirkan masalah?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 29,
+      "text": "Siapa yang mempengaruhi penyakit mental?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 30,
+      "text": "Apa yang menyebabkan penyakit mental?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 31,
+      "text": "Bagaimana seseorang bisa sakit jiwa?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 32,
+      "text": "Kenapa bisa kena penyakit mental?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 33,
+      "text": "Macam-macam penyakit mental",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 34,
+      "text": "Macam-macam gangguan mental",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 35,
+      "text": "Apa aja sih penyakit jiwa?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 36,
+      "text": "Contoh penyakit mental",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 37,
+      "text": "Contoh gangguan mental",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 38,
+      "text": "Apa saja nama penyakit mental?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 39,
+      "text": "Apa itu stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 40,
+      "text": "Apa yang dimaksud stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 41,
+      "text": "Apa yang menyebabkan stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 42,
+      "text": "Dampak jika stres",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 43,
+      "text": "Apa ciri-ciri stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 44,
+      "text": "Obat penghilang stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 45,
+      "text": "Bagaimana cara mengatasi stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 46,
+      "text": "Tips cara mengatasi stres",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 47,
+      "text": "Sumber stres terbesar?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 48,
+      "text": "Perbedaan antara depresi dan stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 49,
+      "text": "Stres bertanya ke siapa?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 50,
+      "text": "Contoh stres",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 51,
+      "text": "Apakah stres boleh dihilangkan?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 52,
+      "text": "Apakah semua orang pernah stres?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 53,
+      "text": "Stres menjadi depresi",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 54,
+      "text": "Pikiran kacau",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 55,
+      "text": "Komplikasi stres",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 56,
+      "text": "Tempat penghilang stres",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 57,
+      "text": "Apa itu depresi?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 58,
+      "text": "Apa yang dimaksud depresi?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 59,
+      "text": "Berapa lama orang sembuh dari depresi?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 60,
+      "text": "Apa depresi bisa sembuh?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 61,
+      "text": "Tingkah laku orang depresi?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 62,
+      "text": "Apakah depresi termasuk gangguan jiwa?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 63,
+      "text": "Apakah orang depresi bisa tertawa?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 64,
+      "text": "Kenapa sering ingin melukai diri sendiri?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 65,
+      "text": "Apakah menyakiti diri sendiri itu dosa?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 66,
+      "text": "Apa itu skizofrenia?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 67,
+      "text": "Skizofrenia adalah",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 68,
+      "text": "Apa yang dimaksud skizofrenia?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 69,
+      "text": "Ngomong sendiri penyakit apa?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 70,
+      "text": "Apa itu gangguan kecemasan?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 71,
+      "text": "Gangguan kecemasan adalah",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 72,
+      "text": "Apa yang dimaksud gangguan kecemasan?",
+      "kategori": "H",
+      "next": "I"
+    }
+  ]
+}

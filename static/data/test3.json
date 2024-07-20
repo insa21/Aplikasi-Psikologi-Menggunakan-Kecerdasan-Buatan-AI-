@@ -1,0 +1,76 @@
+{
+  "pertanyaan": [
+    {
+      "id": 73,
+      "text": "Apa itu gangguan bipolar?",
+      "kategori": "H_GangguanBipolar",
+      "next": "H_GangguanBipolar_2"
+    },
+    {
+      "id": 74,
+      "text": "Gangguan bipolar adalah",
+      "kategori": "H_GangguanBipolar",
+      "next": "H_GangguanBipolar_2"
+    },
+    {
+      "id": 75,
+      "text": "Apa yang dimaksud gangguan bipolar?",
+      "kategori": "H_GangguanBipolar",
+      "next": "H_GangguanBipolar_2"
+    },
+    {
+      "id": 76,
+      "text": "Apa itu gangguan tidur?",
+      "kategori": "H_GangguanTidur",
+      "next": "H_GangguanTidur_2"
+    },
+    {
+      "id": 77,
+      "text": "Gangguan tidur adalah",
+      "kategori": "H_GangguanTidur",
+      "next": "H_GangguanTidur_2"
+    },
+    {
+      "id": 78,
+      "text": "Apa yang dimaksud gangguan tidur?",
+      "kategori": "H_GangguanTidur",
+      "next": "H_GangguanTidur_2"
+    },
+    {
+      "id": 79,
+      "text": "Apa itu gangguan makan?",
+      "kategori": "H_GangguanMakan",
+      "next": "H_GangguanMakan_2"
+    },
+    {
+      "id": 80,
+      "text": "Gangguan makan adalah",
+      "kategori": "H_GangguanMakan",
+      "next": "H_GangguanMakan_2"
+    },
+    {
+      "id": 81,
+      "text": "Apa yang dimaksud gangguan makan?",
+      "kategori": "H_GangguanMakan",
+      "next": "H_GangguanMakan_2"
+    },
+    {
+      "id": 82,
+      "text": "Apa itu Obsesif-Compulsif Disorder (OCD)?",
+      "kategori": "H_OCD",
+      "next": "H_OCD_2"
+    },
+    {
+      "id": 83,
+      "text": "Obsesif-Compulsif Disorder adalah",
+      "kategori": "H_OCD",
+      "next": "H_OCD_2"
+    },
+    {
+      "id": 84,
+      "text": "Apa yang dimaksud Obsesif-Compulsif Disorder?",
+      "kategori": "H_OCD",
+      "next": "H_OCD_2"
+    }
+  ]
+}

@@ -3,11 +3,11 @@ import pickle
 import random
 
 import nltk
+# nltk.download('popular')
 import numpy as np
 from flask import Flask, render_template, request
 from keras.models import load_model
 from nltk.stem import WordNetLemmatizer
-# nltk.download('popular')
 
 from flask import Flask, render_template, Response
 import cv2
@@ -99,7 +99,6 @@ face_haar_cascade = cv2.CascadeClassifier(
 # app = Flask(__name__)
 
 camera = cv2.VideoCapture(0)
-
 
 def gen_frames():  # generate frame by frame from camera
     while True:

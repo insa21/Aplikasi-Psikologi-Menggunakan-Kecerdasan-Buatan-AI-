@@ -107,7 +107,7 @@ model1.add(keras.layers.Conv2D(filters=128, kernel_size=(3, 3), padding='same',
 model1.add(keras.layers.BatchNormalization())
 model1.add(keras.layers.Conv2D(filters=128, kernel_size=(3, 3), padding='same',
                                kernel_initializer='he_normal',
-                               activation="elu"))
+                               activation="relu"))
 
 model1.add(keras.layers.BatchNormalization())
 model1.add(keras.layers.MaxPooling2D(pool_size=(2, 2)))

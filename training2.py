@@ -1,175 +1,105 @@
-# Import Libraries
+import random
+from keras.optimizers import SGD
+from keras.layers import Dense, Activation, Dropout
+from keras.models import Sequential
+import numpy as np
+import pickle
 import json
 import nltk
-import time
-import random
-import string
-import pickle
-import numpy as np
-import pandas as pd
-from gtts import gTTS
-from io import BytesIO
-import tensorflow as tf
-import IPython.display as ipd
-import speech_recognition as sr
-import matplotlib.pyplot as plt
 from nltk.stem import WordNetLemmatizer
-from tensorflow.keras.models import Model
-from keras.utils.vis_utils import plot_model
-from sklearn.preprocessing import LabelEncoder
-from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.layers import Input, Embedding, LSTM
-from tensorflow.keras.preprocessing.sequence import pad_sequences
-from tensorflow.keras.layers import Flatten, Dense, GlobalMaxPool1D
-
-nltk.download('punkt')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-
-# Importing the dataset
-with open('data.json') as content:
-    data1 = json.load(content)
-
-# Mendapatkan semua data ke dalam list
-tags = []  # data tag
-inputs = []  # data input atau pattern
-responses = {}  # data respon
-words = []  # Data kata
-classes = []  # Data Kelas atau Tag
-documents = []  # Data Kalimat Dokumen
-ignore_words = ['?', '!']  # Mengabaikan tanda spesial karakter
-
-for intent in data1['intents']:
-    responses[intent['tag']] = intent['responses']
-    for lines in intent['patterns']:
-        inputs.append(lines)
-        tags.append(intent['tag'])
-        for pattern in intent['patterns']:
-            w = nltk.word_tokenize(pattern)
-            words.extend(w)
-            documents.append((w, intent['tag']))
-            # add to our classes list
-            if intent['tag'] not in classes:
-                classes.append(intent['tag'])
-
-# Konversi data json ke dalam dataframe
-data = pd.DataFrame({"patterns": inputs, "tags": tags})
-data
-
-data.head()  # Cetak data baris pertama sampai baris kelima
-data.tail()  # Cetak data baris ke-70 sampai baris akhir
-
-# Preprocessing The Data
-# Setelah kita meload data dan mengonversi data json menjadi dataframe. Tahapan selanjutnya adalah praproses pada dataset yang kita gunakan saat ini yaitu dengan cara:
-# Remove Punctuations (Menghapus Punktuasi)
-# Lematization (Lematisasi)
-# Tokenization (Tokenisasi)
-# Apply Padding (Padding)
-# Encoding the Outputs (Konversi Keluaran Enkoding)
-
-
-# Removing Punctuations (Menghilangkan Punktuasi)
-data['patterns'] = data['patterns'].apply(
-    lambda wrd: [ltrs.lower() for ltrs in wrd if ltrs not in string.punctuation])
-data['patterns'] = data['patterns'].apply(lambda wrd: ''.join(wrd))
-data
-
-# Lematisasi Kata “lemmatization adalah proses yang bertujuan untuk melakukan normalisasi pada teks dengan berdasarkan pada bentuk dasar yang merupakan bentuk lemmanya”. database yang menyimpan ejaan dan kata-kata yang tepat berdasarkan PUEBI dan KBBI.
 lemmatizer = WordNetLemmatizer()
+
+
+words = []
+classes = []
+documents = []
+ignore_words = ['?', '!']
+data_file = open('data.json').read()
+intents = json.loads(data_file)
+
+
+for intent in intents['intents']:
+    for pattern in intent['patterns']:
+
+        # tokenize setiap kata
+        w = nltk.word_tokenize(pattern)
+        words.extend(w)
+        # tambahkan dokumen di korpus
+        documents.append((w, intent['tag']))
+
+        # add to our classes list
+        # tambahkan ke daftar kelas kami
+        if intent['tag'] not in classes:
+            classes.append(intent['tag'])
+
+# lemmaztize dan turunkan setiap kata dan hapus duplikat
 words = [lemmatizer.lemmatize(w.lower())
          for w in words if w not in ignore_words]
 words = sorted(list(set(words)))
+# mengurutkan kelas
+classes = sorted(list(set(classes)))
+# dokumen = kombinasi antara pola dan maksud
+print(len(documents), "documents")
+# classes = intents
+print(len(classes), "classes", classes)
+# kata = semua kata, kosa kata
+# words = all words, vocabulary
 print(len(words), "unique lemmatized words", words)
 
-# sort classes
-classes = sorted(list(set(classes)))
-print(len(classes), "classes", classes)
 
-# documents = combination between patterns and intents
-print(len(documents), "documents")
+pickle.dump(words, open('texts.pkl', 'wb'))
+pickle.dump(classes, open('labels.pkl', 'wb'))
 
-# Tokenize the data (Tokenisasi Data)
-tokenizer = Tokenizer(num_words=2000)
-tokenizer.fit_on_texts(data['patterns'])
-train = tokenizer.texts_to_sequences(data['patterns'])
-train
+# create our training data
+training = []
+# create an empty array for our output
+output_empty = [0] * len(classes)
+# training set, bag of words for each sentence
+for doc in documents:
+    # initialize our bag of words
+    bag = []
+    # list of tokenized words for the pattern
+    pattern_words = doc[0]
+    # lemmatize setiap kata - buat kata dasar, dalam upaya untuk mewakili kata-kata terkait
+    # lemmatize each word - create base word, in attempt to represent related words
+    pattern_words = [lemmatizer.lemmatize(
+        word.lower()) for word in pattern_words]
+    # buat kumpulan kata-kata kami dengan 1, jika kecocokan kata ditemukan dalam pola saat ini
+    # create our bag of words array with 1, if word match found in current pattern
+    for w in words:
+        bag.append(1) if w in pattern_words else bag.append(0)
 
-# Apply padding
-x_train = pad_sequences(train)
-# Encoding the outputs
-le = LabelEncoder()
-y_train = le.fit_transform(data['tags'])
+    # output is a '0' for each tag and '1' for current tag (for each pattern)
+    output_row = list(output_empty)
+    output_row[classes.index(doc[1])] = 1
 
-print(x_train)  # Padding Sequences
-print(y_train)  # Label Encodings
-
-# Tokenizer pada Tensorflow memberikan token unik untuk setiap kata yang berbeda. Dan juga padding dilakukan untuk mendapatkan semua data dengan panjang yang sama sehingga dapat mengirimkannya ke lapisan atau layer RNN. variabel target juga dikodekan menjadi nilai desimal.
-
-# Input Length, Output Length and Vocabulary
-# input length
-input_shape = x_train.shape[1]
-print(input_shape)
-
-# define vocabulary
-vocabulary = len(tokenizer.word_index)
-print("number of unique words : ", vocabulary)
-
-# output length
-output_length = le.classes_.shape[0]
-print("output length: ", output_length)
-
-# Input length dan output length terlihat sangat jelas hasilnya. Mereka adalah untuk bentuk input dan bentuk output dari jaringan syaraf pada algoritma Neural Network.
-# Vocabulary Size adalah untuk lapisan penyematan untuk membuat representasi vektor unik untuk setiap kata.
-
-# Save Model Words & Classes
-pickle.dump(words, open('texts2.pkl', 'wb'))
-pickle.dump(classes, open('labels2.pkl', 'wb'))
+    training.append([bag, output_row])
+# shuffle our features and turn into np.array
+random.shuffle(training)
+training = np.array(training)
+# create train and test lists. X - patterns, Y - intents
+train_x = list(training[:, 0])
+train_y = list(training[:, 1])
+print("Training data created")
 
 
-# Neural Network Model
-# Jaringan syaraf yang terdiri dari lapisan embedding yang merupakan salah satu hal yang paling kuat di bidang pemrosesan bahasa alami atau NLP. output atau keluaran dari lapisan embedding adalah input dari lapisan berulang (recurrent) dengan LSTM gate. Kemudian, output diratakan dan lapisan Dense digunakan dengan fungsi aktivasi softmax.
-# Bagian utama adalah lapisan embedding yang memberikan vektor yang sesuai untuk setiap kata dalam dataset.
+# Buat model - 3 lapisan. Lapisan pertama 128 neuron, lapisan kedua 64 neuron dan lapisan keluaran ke-3 berisi jumlah neuron
+# sama dengan jumlah maksud untuk memprediksi maksud keluaran dengan softmax
+model = Sequential()
+model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(64, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(len(train_y[0]), activation='softmax'))
 
-# Creating the model (Membuat Modeling)
-i = Input(shape=(input_shape,))
-x = Embedding(vocabulary+1, 10)(i)  # Layer Embedding
-x = LSTM(10, return_sequences=True)(x)  # Layer Long Short Term Memory
-x = Flatten()(x)  # Layer Flatten
-x = Dense(output_length, activation="softmax")(x)  # Layer Dense
-model = Model(i, x)
+# Kompilasi model. Penurunan gradien stokastik dengan gradien akselerasi Nesterov memberikan hasil yang baik untuk model ini
+sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
+model.compile(loss='categorical_crossentropy',
+              optimizer=sgd, metrics=['accuracy'])
 
-# Compiling the model (Kompilasi Model)
-model.compile(loss="sparse_categorical_crossentropy",
-              optimizer='adam', metrics=['accuracy'])
+# pas dan simpan modelnya
+hist = model.fit(np.array(train_x), np.array(train_y),
+                 epochs=200, batch_size=5, verbose=1)
+model.save('model.h5', hist)
 
-# Visualization Plot Architecture Model (Visualisasi Plot Arsitektur Model)
-plot_model(model, to_file='chatbot.png',
-           show_shapes=True, show_layer_names=True)
-
-model.summary()  # Menampilkan Parameter Model
-
-# Training the model (Latih Model Data)
-train = model.fit(x_train, y_train, epochs=400)
-
-
-# Model Analysis
-# Setelah menjalankan model fitting. Selanjutnya adalah analisa model untuk melihat hasil akurasi dari model Neural Network tersebut.
-
-# Plotting model Accuracy and Loss (Visualisasi Plot Hasil Akurasi dan Loss)
-# Plot Akurasi
-# plt.figure(figsize=(14, 5))
-# plt.subplot(1, 2, 1)
-# plt.plot(train.history['accuracy'], label='Training Set Accuracy')
-# plt.legend(loc='lower right')
-# plt.title('Accuracy')
-# Plot Loss
-# plt.subplot(1, 2, 2)
-# plt.plot(train.history['loss'], label='Training Set Loss')
-# plt.legend(loc='upper right')
-# plt.title('Loss')
-# plt.show()
-
-# Save The Model
-# Setelah pengujian Chatbot telah disesuaikan dengan kalimat dan jawabannya. Maka, model chatbot bisa disimpan dengan format .h5 atau .pkl (pickle) untuk penggunaan aplikasi AI Chatbot dengan website atau sistem Android.
-model.save('model2.h5', train)
-print('Model Created Successfully!')
+print("model created")

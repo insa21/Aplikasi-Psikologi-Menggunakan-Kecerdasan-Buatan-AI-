@@ -1,0 +1,334 @@
+{
+  "pertanyaan": [
+    {
+      "id": 1,
+      "text": "apa itu stunting?",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 2,
+      "text": "apa pengertian stunting?",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 3,
+      "text": "saya ingin tahu tentang stunting.",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 4,
+      "text": "mengapa anak bisa mengalami stunting?",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 5,
+      "text": "bagaimana cara mengenali stunting?",
+      "kategori": "A",
+      "next": "B"
+    },
+    {
+      "id": 6,
+      "text": "bagaimana cara mengetahui anak stunting?",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 7,
+      "text": "bagaimana cara mencegah stunting?",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 8,
+      "text": "pencegahan stunting pada balita.",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 9,
+      "text": "apa langkah-langkah pencegahan stunting?",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 10,
+      "text": "cara mencegah stunting.",
+      "kategori": "B",
+      "next": "C"
+    },
+    {
+      "id": 11,
+      "text": "apa saja gejala stunting pada anak?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 12,
+      "text": "tanda-tanda stunting.",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 13,
+      "text": "bagaimana cara mengetahui anak stunting?",
+      "kategori": "C",
+      "next": "D"
+    },
+    {
+      "id": 14,
+      "text": "apa saja dampak dari stunting?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 15,
+      "text": "dampak jangka panjang stunting.",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 16,
+      "text": "apa dampak buruk dari stunting?",
+      "kategori": "D",
+      "next": "E"
+    },
+    {
+      "id": 17,
+      "text": "faktor penyebab stunting apa saja?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 18,
+      "text": "penyebab dari stunting apa?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 19,
+      "text": "faktor apa yang menyebabkan stunting?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 20,
+      "text": "apa faktor penyebab stunting?",
+      "kategori": "E",
+      "next": "F"
+    },
+    {
+      "id": 21,
+      "text": "bagaimana teknik pemberian makanan yang benar dapat membantu mencegah stunting pada anak?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 22,
+      "text": "apa saja metode pemberian makanan yang efektif untuk asupan gizi optimal pada anak?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 23,
+      "text": "bagaimana cara mengatasi anak yang sulit makan dengan menerapkan teknik pemberian makanan yang tepat?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 24,
+      "text": "apakah variasi dalam menu makanan memiliki peran penting dalam mencegah stunting pada anak?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 25,
+      "text": "bagaimana cara mengajarkan orang tua tentang teknik pemberian makanan yang seimbang untuk anak?",
+      "kategori": "F",
+      "next": "G"
+    },
+    {
+      "id": 26,
+      "text": "seberapa penting aktivitas fisik dalam mendukung pertumbuhan anak dan mencegah stunting?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 27,
+      "text": "jenis aktivitas fisik apa yang disarankan untuk anak-anak mencapai pertumbuhan optimal?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 28,
+      "text": "bagaimana aktivitas fisik dapat mencegah stunting?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 29,
+      "text": "apa hubungan antara kurangnya aktivitas fisik dan peningkatan risiko stunting pada anak?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 30,
+      "text": "aktivitas fisik dapat meningkatkan stunting?",
+      "kategori": "G",
+      "next": "H"
+    },
+    {
+      "id": 31,
+      "text": "peran pemerintah dalam mendukung program pencegahan stunting di tingkat nasional?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 32,
+      "text": "bagaimana kebijakan pemerintah dapat berkontribusi pada penanggulangan stunting?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 33,
+      "text": "apakah terdapat kebijakan yang ditetapkan oleh pemerintah untuk mencegah stunting?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 34,
+      "text": "upaya yang diambil oleh pemerintah dalam pencegahan stunting?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 35,
+      "text": "mengapa ketersediaan air bersih berperan penting dalam pencegahan stunting?",
+      "kategori": "H",
+      "next": "I"
+    },
+    {
+      "id": 36,
+      "text": "dampak kurangnya akses terhadap air bersih terhadap risiko infeksi dan pertumbuhan anak?",
+      "kategori": "I",
+      "next": "J"
+    },
+    {
+      "id": 37,
+      "text": "apa yang terjadi jika akses terhadap air bersih kurang?",
+      "kategori": "I",
+      "next": "J"
+    },
+    {
+      "id": 38,
+      "text": "langkah-langkah yang diambil oleh pemerintah untuk meningkatkan akses air bersih?",
+      "kategori": "I",
+      "next": "J"
+    },
+    {
+      "id": 39,
+      "text": "bagaimana kesehatan mental anak dapat berdampak pada pertumbuhan fisik anak?",
+      "kategori": "I",
+      "next": "J"
+    },
+    {
+      "id": 40,
+      "text": "mengapa dukungan kesehatan mental berpengaruh dalam pertumbuhan fisik?",
+      "kategori": "I",
+      "next": "J"
+    },
+    {
+      "id": 41,
+      "text": "apakah anak-anak yang mengalami stunting dipengaruhi oleh kesehatan mental?",
+      "kategori": "J",
+      "next": "K"
+    },
+    {
+      "id": 42,
+      "text": "apakah kesehatan mental dapat mempengaruhi stunting?",
+      "kategori": "J",
+      "next": "K"
+    },
+    {
+      "id": 43,
+      "text": "apakah anak yang pendek selalu stunting?",
+      "kategori": "J",
+      "next": "K"
+    },
+    {
+      "id": 44,
+      "text": "apakah anak pendek termasuk stunting?",
+      "kategori": "J",
+      "next": "K"
+    },
+    {
+      "id": 45,
+      "text": "apa perbedaan anak pendek dan stunting?",
+      "kategori": "J",
+      "next": "K"
+    },
+    {
+      "id": 46,
+      "text": "apakah stunting tergolong penyakit?",
+      "kategori": "K",
+      "next": "L"
+    },
+    {
+      "id": 47,
+      "text": "stunting itu penyakit atau tidak?",
+      "kategori": "K",
+      "next": "L"
+    },
+    {
+      "id": 48,
+      "text": "apakah stunting merupakan gejala penyakit?",
+      "kategori": "K",
+      "next": "L"
+    },
+    {
+      "id": 49,
+      "text": "mengapa 1.000 hari pertama kehidupan seorang anak disebut sebagai periode emas?",
+      "kategori": "K",
+      "next": "L"
+    },
+    {
+      "id": 50,
+      "text": "apa yang dimaksud dengan periode emas dalam pencegahan stunting?",
+      "kategori": "L",
+      "next": "M"
+    },
+    {
+      "id": 51,
+      "text": "periode emas adalah apa?",
+      "kategori": "L",
+      "next": "M"
+    },
+    {
+      "id": 52,
+      "text": "hallo",
+      "kategori": "M",
+      "next": "A"
+    },
+    {
+      "id": 53,
+      "text": "terimakasih",
+      "kategori": "M",
+      "next": "A"
+    },
+    {
+      "id": 54,
+      "text": "terimakasih banyak",
+      "kategori": "M",
+      "next": "A"
+    },
+    {
+      "id": 55,
+      "text": "dadah",
+      "kategori": "M",
+      "next": "A"
+    }
+  ]
+}

@@ -1,15 +1,17 @@
 import random
 from keras.optimizers import SGD
-from keras.layers import Dense, Activation, Dropout
-from keras.models import Sequential
+from keras.layers import Dense, LSTM, Embedding, Flatten, Input
+from keras.models import Sequential, Model
 import numpy as np
 import pickle
 import json
 import nltk
 from nltk.stem import WordNetLemmatizer
+
+# Inisialisasi WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
-
+# Membaca data dari file JSON
 words = []
 classes = []
 documents = []
@@ -17,89 +19,73 @@ ignore_words = ['?', '!']
 data_file = open('data.json').read()
 intents = json.loads(data_file)
 
-
+# Memproses setiap pola pertanyaan dan kelasnya
 for intent in intents['intents']:
     for pattern in intent['patterns']:
-
-        # tokenize setiap kata
+        # Tokenisasi setiap kata
         w = nltk.word_tokenize(pattern)
         words.extend(w)
-        # tambahkan dokumen di korpus
+        # Tambahkan dokumen ke korpus
         documents.append((w, intent['tag']))
-
-        # add to our classes list
-        # tambahkan ke daftar kelas kami
+        # Tambahkan ke daftar kelas
         if intent['tag'] not in classes:
             classes.append(intent['tag'])
 
-# lemmaztize dan turunkan setiap kata dan hapus duplikat
-words = [lemmatizer.lemmatize(w.lower())
-         for w in words if w not in ignore_words]
+# Lemmatisasi kata-kata dan ubah menjadi huruf kecil, lalu hapus duplikat
+words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
 words = sorted(list(set(words)))
-# mengurutkan kelas
+# Urutkan kelas
 classes = sorted(list(set(classes)))
-# dokumen = kombinasi antara pola dan maksud
-print(len(documents), "documents")
-# classes = intents
-print(len(classes), "classes", classes)
-# kata = semua kata, kosa kata
-# words = all words, vocabulary
-print(len(words), "unique lemmatized words", words)
+print(len(documents), "dokumen")
+print(len(classes), "kelas", classes)
+print(len(words), "kata unik yang sudah dilemmatize", words)
 
-
+# Simpan kata-kata dan kelas-kelas ke dalam file pickle
 pickle.dump(words, open('texts.pkl', 'wb'))
 pickle.dump(classes, open('labels.pkl', 'wb'))
 
-# create our training data
+# Membuat data latih
 training = []
-# create an empty array for our output
 output_empty = [0] * len(classes)
-# training set, bag of words for each sentence
 for doc in documents:
-    # initialize our bag of words
     bag = []
-    # list of tokenized words for the pattern
     pattern_words = doc[0]
-    # lemmatize setiap kata - buat kata dasar, dalam upaya untuk mewakili kata-kata terkait
-    # lemmatize each word - create base word, in attempt to represent related words
-    pattern_words = [lemmatizer.lemmatize(
-        word.lower()) for word in pattern_words]
-    # buat kumpulan kata-kata kami dengan 1, jika kecocokan kata ditemukan dalam pola saat ini
-    # create our bag of words array with 1, if word match found in current pattern
+    pattern_words = [lemmatizer.lemmatize(word.lower()) for word in pattern_words]
     for w in words:
         bag.append(1) if w in pattern_words else bag.append(0)
-
-    # output is a '0' for each tag and '1' for current tag (for each pattern)
     output_row = list(output_empty)
     output_row[classes.index(doc[1])] = 1
-
     training.append([bag, output_row])
-# shuffle our features and turn into np.array
+
+# Mengacak data latih dan mengonversi menjadi array numpy
 random.shuffle(training)
-training = np.array(training)
-# create train and test lists. X - patterns, Y - intents
-train_x = list(training[:, 0])
-train_y = list(training[:, 1])
-print("Training data created")
+training = np.array(training, dtype=object)  # Menggunakan dtype=object untuk menghindari masalah panjang yang tidak seragam
 
+train_x = np.array([np.array(entry[0]) for entry in training])
+train_y = np.array([np.array(entry[1]) for entry in training])
+print("Data latih telah dibuat")
 
-# Buat model - 3 lapisan. Lapisan pertama 128 neuron, lapisan kedua 64 neuron dan lapisan keluaran ke-3 berisi jumlah neuron
-# sama dengan jumlah maksud untuk memprediksi maksud keluaran dengan softmax
-model = Sequential()
-model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(64, activation='relu'))
-model.add(Dropout(0.5))
-model.add(Dense(len(train_y[0]), activation='softmax'))
+# Membuat model LSTM baru
+input_shape = len(train_x[0])
+vocabulary = len(words)
+output_length = len(classes)  # Sesuaikan dengan jumlah kelas
 
-# Kompilasi model. Penurunan gradien stokastik dengan gradien akselerasi Nesterov memberikan hasil yang baik untuk model ini
-sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
-model.compile(loss='categorical_crossentropy',
-              optimizer=sgd, metrics=['accuracy'])
+i = Input(shape=(input_shape,))
+x = Embedding(vocabulary + 1, 10)(i)  # Layer Embedding
+x = LSTM(10, return_sequences=True)(x)  # Layer Long Short Term Memory
+x = Flatten()(x)  # Layer Flatten
+x = Dense(output_length, activation="softmax")(x)  # Layer Dense
+model = Model(i, x)
 
-# pas dan simpan modelnya
-hist = model.fit(np.array(train_x), np.array(train_y),
-                 epochs=200, batch_size=5, verbose=1)
-model.save('model.h5', hist)
+# Kompilasi model
+model.compile(loss="categorical_crossentropy", optimizer='adam', metrics=['accuracy'])
 
-print("model created")
+# Ubah data latih agar sesuai dengan input LSTM (tambahkan dimensi tambahan)
+train_x = np.array(train_x)
+train_x = np.reshape(train_x, (train_x.shape[0], train_x.shape[1], 1))
+
+# Melatih model
+hist = model.fit(train_x, np.array(train_y), epochs=200, batch_size=5, verbose=1)
+model.save('model_lstm.h5', hist)
+
+print("Model LSTM telah dibuat dan disimpan")
