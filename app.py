@@ -14,8 +14,8 @@ from flask import Flask, render_template, Response
 import cv2
 import numpy as np
 
-# from tensorflow.keras.models import model_from_json
-# from tensorflow.keras.preprocessing import image
+from tensorflow.keras.models import model_from_json
+from tensorflow.keras.preprocessing import image
 
 
 lemmatizer = WordNetLemmatizer()
