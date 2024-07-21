@@ -15,21 +15,21 @@ lemmatizer = WordNetLemmatizer()
 words = []
 classes = []
 documents = []
-ignore_words = ['?', '!']
-data_file = open('data.json').read()
+ignore_words = ["?", "!"]
+data_file = open("data.json").read()
 intents = json.loads(data_file)
 
 # Memproses setiap pola pertanyaan dan kelasnya
-for intent in intents['intents']:
-    for pattern in intent['patterns']:
+for intent in intents["intents"]:
+    for pattern in intent["patterns"]:
         # Tokenisasi setiap kata
         w = nltk.word_tokenize(pattern)
         words.extend(w)
         # Tambahkan dokumen ke korpus
-        documents.append((w, intent['tag']))
+        documents.append((w, intent["tag"]))
         # Tambahkan ke daftar kelas
-        if intent['tag'] not in classes:
-            classes.append(intent['tag'])
+        if intent["tag"] not in classes:
+            classes.append(intent["tag"])
 
 # Lemmatisasi kata-kata dan ubah menjadi huruf kecil, lalu hapus duplikat
 words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words]
@@ -41,8 +41,8 @@ print(len(classes), "kelas", classes)
 print(len(words), "kata unik yang sudah dilemmatize", words)
 
 # Simpan kata-kata dan kelas-kelas ke dalam file pickle
-pickle.dump(words, open('texts.pkl', 'wb'))
-pickle.dump(classes, open('labels.pkl', 'wb'))
+pickle.dump(words, open("texts.pkl", "wb"))
+pickle.dump(classes, open("labels.pkl", "wb"))
 
 # Membuat data latih
 training = []
@@ -59,7 +59,9 @@ for doc in documents:
 
 # Mengacak data latih dan mengonversi menjadi array numpy
 random.shuffle(training)
-training = np.array(training, dtype=object)  # Menggunakan dtype=object untuk menghindari masalah panjang yang tidak seragam
+training = np.array(
+    training, dtype=object
+)  # Menggunakan dtype=object untuk menghindari masalah panjang yang tidak seragam
 
 train_x = np.array([np.array(entry[0]) for entry in training])
 train_y = np.array([np.array(entry[1]) for entry in training])
@@ -78,7 +80,7 @@ x = Dense(output_length, activation="softmax")(x)  # Layer Dense
 model = Model(i, x)
 
 # Kompilasi model
-model.compile(loss="categorical_crossentropy", optimizer='adam', metrics=['accuracy'])
+model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # Ubah data latih agar sesuai dengan input LSTM (tambahkan dimensi tambahan)
 train_x = np.array(train_x)
@@ -86,6 +88,6 @@ train_x = np.reshape(train_x, (train_x.shape[0], train_x.shape[1], 1))
 
 # Melatih model
 hist = model.fit(train_x, np.array(train_y), epochs=200, batch_size=5, verbose=1)
-model.save('model_lstm.h5', hist)
+model.save("model_lstm.h5", hist)
 
 print("Model LSTM telah dibuat dan disimpan")
