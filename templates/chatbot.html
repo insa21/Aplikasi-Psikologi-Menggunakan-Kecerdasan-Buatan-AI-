@@ -589,8 +589,9 @@
         let questionsData = [];
 
         function loadQuestionsData() {
-            $.getJSON("/static/FE/data/recomendation.json", function (data) {
+            $.getJSON("../static/data/test3.json", function (data) {
                 questionsData = data.pertanyaan;
+                console.log("Data JSON berhasil dimuat:", questionsData);
             }).fail(function () {
                 console.error("Gagal memuat data JSON.");
             });
@@ -613,11 +614,12 @@
             }
 
             const similarQuestions = findSimilarQuestions(msgText, questionsData);
-            if (similarQuestions.length > 0) {
-                console.log("Pertanyaan mirip ditemukan:", similarQuestions);
-                const recommendedQuestionsContainer = document.querySelector(".recommended-questions");
-                recommendedQuestionsContainer.innerHTML = "";
+            console.log("Pertanyaan mirip ditemukan:", similarQuestions);
 
+            const recommendedQuestionsContainer = document.querySelector(".recommended-questions");
+            recommendedQuestionsContainer.innerHTML = "";
+
+            if (similarQuestions.length > 0) {
                 similarQuestions.forEach(function (question) {
                     const btn = document.createElement("button");
                     btn.className = "recommended-question-btn";
@@ -627,12 +629,10 @@
                     });
                     recommendedQuestionsContainer.appendChild(btn);
                 });
-
-                if (similarQuestions.length === 0) {
-                    const noQuestionsMsg = document.createElement("p");
-                    noQuestionsMsg.textContent = "Tidak ada pertanyaan yang mirip.";
-                    recommendedQuestionsContainer.appendChild(noQuestionsMsg);
-                }
+            } else {
+                const noQuestionsMsg = document.createElement("p");
+                noQuestionsMsg.textContent = "Tidak ada pertanyaan yang mirip.";
+                recommendedQuestionsContainer.appendChild(noQuestionsMsg);
             }
 
             appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
@@ -655,7 +655,7 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             loadQuestionsData();
-            loadAndDisplayQuestionsByCategory('H_GangguanBipolar'); // Contoh kategori awal
+            loadAndDisplayQuestionsByCategory('PenyakitMental'); // Contoh kategori awal
         });
 
         function updateCurrentTime() {

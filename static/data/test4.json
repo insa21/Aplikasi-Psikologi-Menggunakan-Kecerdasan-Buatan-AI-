@@ -1,0 +1,946 @@
+{
+  "pertanyaan": [
+    {
+      "id": 1,
+      "text": "Apa artinya memiliki penyakit mental?",
+      "kategori": "Definisi",
+      "next": "Informasi"
+    },
+    {
+      "id": 2,
+      "text": "Apa itu penyakit kesehatan mental?",
+      "kategori": "Definisi",
+      "next": "Informasi"
+    },
+    {
+      "id": 3,
+      "text": "Jelaskan penyakit kesehatan mental",
+      "kategori": "Definisi",
+      "next": "Informasi"
+    },
+    {
+      "id": 4,
+      "text": "Definisi mental health",
+      "kategori": "Definisi",
+      "next": "Informasi"
+    },
+    {
+      "id": 5,
+      "text": "Penyakit mental harus kemana?",
+      "kategori": "Deteksi",
+      "next": "Biaya"
+    },
+    {
+      "id": 6,
+      "text": "Cara mengetahui kita sakit mental apa?",
+      "kategori": "Deteksi",
+      "next": "Biaya"
+    },
+    {
+      "id": 7,
+      "text": "Ciri-ciri kita terkena penyakit mental",
+      "kategori": "Deteksi",
+      "next": "Biaya"
+    },
+    {
+      "id": 8,
+      "text": "Berapa biaya ke psikiater?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 9,
+      "text": "Berapa harga ke psikiater?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 10,
+      "text": "Berapa tarif ke psikiater?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 11,
+      "text": "Mengapa kesehatan mental dapat berubah?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 12,
+      "text": "Psikolog harus dipanggil apa?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 13,
+      "text": "Kenapa psikolog lebih mahal dari psikiater?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 14,
+      "text": "Berapa lama kita berobat ke psikiater?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 15,
+      "text": "Mengapa psikiater mahal?",
+      "kategori": "Biaya",
+      "next": "Penyakit"
+    },
+    {
+      "id": 16,
+      "text": "Penyakit mental Apakah Menular?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 17,
+      "text": "Apa Perbedaan depresi dan gila?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 18,
+      "text": "Bagaimana cara keluar dari depresi?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 19,
+      "text": "Apa nama obat depresi di apotik?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 20,
+      "text": "Jenis-jenis obat untuk depresi",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 21,
+      "text": "Apa perbedaan gangguan jiwa dan gangguan mental?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 22,
+      "text": "Kapan kita harus pergi ke psikiater?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 23,
+      "text": "Mental yang sehat itu seperti apa?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 24,
+      "text": "Apa itu mental sehat?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 25,
+      "text": "Jelaskan apa itu mental sehat",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 26,
+      "text": "Apakah overthinking termasuk gangguan mental?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 27,
+      "text": "Kenapa kita sering menghayal dan berbicara sendiri?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 28,
+      "text": "Bagaimana cara agar tidak terlalu memikirkan masalah?",
+      "kategori": "Penyakit",
+      "next": "Penyebab"
+    },
+    {
+      "id": 29,
+      "text": "Siapa yang mempengaruhi penyakit mental?",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 30,
+      "text": "Apa yang menyebabkan penyakit mental?",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 31,
+      "text": "Bagaimana seseorang bisa sakit jiwa?",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 32,
+      "text": "Kenapa bisa kena penyakit mental?",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 33,
+      "text": "Macam-macam penyakit mental",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 34,
+      "text": "Macam-macam gangguan mental",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 35,
+      "text": "Apa aja sih penyakit jiwa?",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 36,
+      "text": "Contoh penyakit mental",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 37,
+      "text": "Contoh gangguan mental",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 38,
+      "text": "Apa saja nama penyakit mental?",
+      "kategori": "Penyebab",
+      "next": "Stress"
+    },
+    {
+      "id": 39,
+      "text": "Apa itu stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 40,
+      "text": "Apa yang dimaksud stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 41,
+      "text": "Apa yang menyebabkan stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 42,
+      "text": "Dampak jika stres",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 43,
+      "text": "Apa ciri-ciri stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 44,
+      "text": "Obat penghilang stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 45,
+      "text": "Bagaimana cara mengatasi stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 46,
+      "text": "Tips cara mengatasi stres",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 47,
+      "text": "Sumber stres terbesar?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 48,
+      "text": "Perbedaan antara depresi dan stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 49,
+      "text": "Stres bertanya ke siapa?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 50,
+      "text": "Contoh stres",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 51,
+      "text": "Apakah stres boleh dihilangkan?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 52,
+      "text": "Apakah semua orang pernah stres?",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 53,
+      "text": "Stres menjadi depresi",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 54,
+      "text": "Pikiran kacau",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 55,
+      "text": "Komplikasi stres",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 56,
+      "text": "Tempat penghilang stres",
+      "kategori": "Stress",
+      "next": "Depresi"
+    },
+    {
+      "id": 57,
+      "text": "Apa itu depresi?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 58,
+      "text": "Apa yang dimaksud depresi?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 59,
+      "text": "Berapa lama orang sembuh dari depresi?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 60,
+      "text": "Apa depresi bisa sembuh?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 61,
+      "text": "Tingkah laku orang depresi?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 62,
+      "text": "Apakah depresi termasuk gangguan jiwa?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 63,
+      "text": "Apakah orang depresi bisa tertawa?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 64,
+      "text": "Kenapa sering ingin melukai diri sendiri?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 65,
+      "text": "Apakah menyakiti diri sendiri itu dosa?",
+      "kategori": "Depresi",
+      "next": "Skizofrenia"
+    },
+    {
+      "id": 66,
+      "text": "Apa itu skizofrenia?",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Kecemasan"
+    },
+    {
+      "id": 67,
+      "text": "Skizofrenia adalah",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Kecemasan"
+    },
+    {
+      "id": 68,
+      "text": "Apa yang dimaksud skizofrenia?",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Kecemasan"
+    },
+    {
+      "id": 69,
+      "text": "Ngomong sendiri penyakit apa?",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Kecemasan"
+    },
+    {
+      "id": 70,
+      "text": "Apa itu gangguan kecemasan?",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Kecemasan"
+    },
+    {
+      "id": 71,
+      "text": "Gangguan kecemasan adalah",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Kecemasan"
+    },
+    {
+      "id": 72,
+      "text": "Apa yang dimaksud gangguan kecemasan?",
+      "kategori": "Skizofrenia",
+      "next": "Gangguan Bipolar"
+    },
+    {
+      "id": 73,
+      "text": "Apa itu gangguan bipolar?",
+      "kategori": "Gangguan Bipolar",
+      "next": "Gangguan Tidur"
+    },
+    {
+      "id": 74,
+      "text": "Gangguan bipolar adalah",
+      "kategori": "Gangguan Bipolar",
+      "next": "Gangguan Tidur"
+    },
+    {
+      "id": 75,
+      "text": "Apa yang dimaksud gangguan bipolar?",
+      "kategori": "Gangguan Bipolar",
+      "next": "Gangguan Tidur"
+    },
+    {
+      "id": 76,
+      "text": "Apa itu gangguan tidur?",
+      "kategori": "Gangguan Tidur",
+      "next": "Gangguan Makan"
+    },
+    {
+      "id": 77,
+      "text": "Gangguan tidur adalah",
+      "kategori": "Gangguan Tidur",
+      "next": "Gangguan Makan"
+    },
+    {
+      "id": 78,
+      "text": "Apa yang dimaksud gangguan tidur?",
+      "kategori": "Gangguan Tidur",
+      "next": "Gangguan Makan"
+    },
+    {
+      "id": 79,
+      "text": "Apa itu gangguan makan?",
+      "kategori": "Gangguan Makan",
+      "next": "OCD"
+    },
+    {
+      "id": 80,
+      "text": "Gangguan makan adalah",
+      "kategori": "Gangguan Makan",
+      "next": "OCD"
+    },
+    {
+      "id": 81,
+      "text": "Apa yang dimaksud gangguan makan?",
+      "kategori": "Gangguan Makan",
+      "next": "OCD"
+    },
+    {
+      "id": 82,
+      "text": "Apa itu Obsesif-Compulsif Disorder (OCD)?",
+      "kategori": "OCD",
+      "next": "Gangguan Kepribadian"
+    },
+    {
+      "id": 83,
+      "text": "Obsesif-Compulsif Disorder adalah",
+      "kategori": "OCD",
+      "next": "Gangguan Kepribadian"
+    },
+    {
+      "id": 84,
+      "text": "Apa yang dimaksud Obsesif-Compulsif Disorder?",
+      "kategori": "OCD",
+      "next": "Gangguan Kepribadian"
+    },
+    {
+      "id": 85,
+      "text": "Apa itu gangguan kepribadian?",
+      "kategori": "Gangguan Kepribadian",
+      "next": "Sindrom Tourette"
+    },
+    {
+      "id": 86,
+      "text": "Gangguan kepribadian adalah",
+      "kategori": "Gangguan Kepribadian",
+      "next": "Sindrom Tourette"
+    },
+    {
+      "id": 87,
+      "text": "Apa yang dimaksud gangguan kepribadian?",
+      "kategori": "Gangguan Kepribadian",
+      "next": "Sindrom Tourette"
+    },
+    {
+      "id": 88,
+      "text": "Apa itu Sindrom Tourette?",
+      "kategori": "Sindrom Tourette",
+      "next": "Psikosomatis"
+    },
+    {
+      "id": 89,
+      "text": "Sindrom Tourette adalah",
+      "kategori": "Sindrom Tourette",
+      "next": "Psikosomatis"
+    },
+    {
+      "id": 90,
+      "text": "Apa yang dimaksud Sindrom Tourette?",
+      "kategori": "Sindrom Tourette",
+      "next": "Psikosomatis"
+    },
+    {
+      "id": 91,
+      "text": "Apa itu psikosomatis?",
+      "kategori": "Psikosomatis",
+      "next": "Factitious"
+    },
+    {
+      "id": 92,
+      "text": "Psikosomatis adalah",
+      "kategori": "Psikosomatis",
+      "next": "Factitious"
+    },
+    {
+      "id": 93,
+      "text": "Apa yang dimaksud psikosomatis?",
+      "kategori": "Psikosomatis",
+      "next": "Factitious"
+    },
+    {
+      "id": 94,
+      "text": "Apa itu factitious?",
+      "kategori": "Factitious",
+      "next": "Disosiatif"
+    },
+    {
+      "id": 95,
+      "text": "Factitious adalah",
+      "kategori": "Factitious",
+      "next": "Disosiatif"
+    },
+    {
+      "id": 96,
+      "text": "Apa yang dimaksud factitious?",
+      "kategori": "Factitious",
+      "next": "Disosiatif"
+    },
+    {
+      "id": 97,
+      "text": "Apa itu disosiatif?",
+      "kategori": "Disosiatif",
+      "next": "PTSD"
+    },
+    {
+      "id": 98,
+      "text": "Disosiatif adalah",
+      "kategori": "Disosiatif",
+      "next": "PTSD"
+    },
+    {
+      "id": 99,
+      "text": "Apa yang dimaksud disosiatif?",
+      "kategori": "Disosiatif",
+      "next": "PTSD"
+    },
+    {
+      "id": 100,
+      "text": "Apa itu Stres Pasca-Trauma (PTSD)?",
+      "kategori": "PTSD",
+      "next": "Kontrol Impuls"
+    },
+    {
+      "id": 101,
+      "text": "Stres Pasca-Trauma (PTSD) adalah",
+      "kategori": "PTSD",
+      "next": "Kontrol Impuls"
+    },
+    {
+      "id": 102,
+      "text": "Apa yang dimaksud Stres Pasca-Trauma (PTSD)?",
+      "kategori": "PTSD",
+      "next": "Kontrol Impuls"
+    },
+    {
+      "id": 103,
+      "text": "Kontrol impuls",
+      "kategori": "Kontrol Impuls",
+      "next": "ADHD"
+    },
+    {
+      "id": 104,
+      "text": "Kontrol impuls adalah",
+      "kategori": "Kontrol Impuls",
+      "next": "ADHD"
+    },
+    {
+      "id": 105,
+      "text": "Apa yang dimaksud kontrol impuls?",
+      "kategori": "Kontrol Impuls",
+      "next": "ADHD"
+    },
+    {
+      "id": 106,
+      "text": "Attention Deficit Hyperactivity Disorder (ADHD)",
+      "kategori": "ADHD",
+      "next": "Penyembuhan"
+    },
+    {
+      "id": 107,
+      "text": "Attention Deficit Hyperactivity Disorder (ADHD) adalah",
+      "kategori": "ADHD",
+      "next": "Penyembuhan"
+    },
+    {
+      "id": 108,
+      "text": "Apa yang dimaksud Attention Deficit Hyperactivity Disorder (ADHD)?",
+      "kategori": "ADHD",
+      "next": "Penyembuhan"
+    },
+    {
+      "id": 109,
+      "text": "Bisakah orang dengan penyakit mental sembuh?",
+      "kategori": "Penyembuhan",
+      "next": "Pencegahan"
+    },
+    {
+      "id": 110,
+      "text": "Apakah mungkin untuk pulih dari penyakit mental?",
+      "kategori": "Penyembuhan",
+      "next": "Pencegahan"
+    },
+    {
+      "id": 111,
+      "text": "Apakah penyakit jiwa bisa disembuhkan?",
+      "kategori": "Penyembuhan",
+      "next": "Pencegahan"
+    },
+    {
+      "id": 112,
+      "text": "Apa saja cara pencegahan penyakit mental?",
+      "kategori": "Pencegahan",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 113,
+      "text": "Apa langkah-langkah pencegahan penyakit mental?",
+      "kategori": "Pencegahan",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 114,
+      "text": "Pencegahan penyakit mental",
+      "kategori": "Pencegahan",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 115,
+      "text": "Bagaimana mencegah penyakit mental?",
+      "kategori": "Pencegahan",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 116,
+      "text": "Bagaimana menemukan profesional kesehatan mental untuk diri saya sendiri?",
+      "kategori": "Profesional Kesehatan Mental",
+      "next": "Pilihan Pengobatan"
+    },
+    {
+      "id": 117,
+      "text": "Bagaimana menemukan profesional kesehatan mental?",
+      "kategori": "Profesional Kesehatan Mental",
+      "next": "Pilihan Pengobatan"
+    },
+    {
+      "id": 118,
+      "text": "Pilihan pengobatan apa yang tersedia?",
+      "kategori": "Pilihan Pengobatan",
+      "next": "Perawatan"
+    },
+    {
+      "id": 119,
+      "text": "Bagaimana seseorang bisa pulih?",
+      "kategori": "Perawatan",
+      "next": "Perawatan"
+    },
+    {
+      "id": 120,
+      "text": "Bagaimana cara terlibat dalam pengobatan?",
+      "kategori": "Perawatan",
+      "next": "Perawatan"
+    },
+    {
+      "id": 121,
+      "text": "Apa yang harus saya ingat jika saya memulai perawatan?",
+      "kategori": "Perawatan",
+      "next": "Perawatan"
+    },
+    {
+      "id": 122,
+      "text": "Apa perbedaan antara profesional kesehatan mental?",
+      "kategori": "Perawatan",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 123,
+      "text": "Apa saja jenis profesional kesehatan mental yang ada?",
+      "kategori": "Profesional Kesehatan Mental",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 124,
+      "text": "Bagaimana saya bisa menemukan seorang profesional kesehatan mental yang benar?",
+      "kategori": "Profesional Kesehatan Mental",
+      "next": "Profesional Kesehatan Mental"
+    },
+    {
+      "id": 125,
+      "text": "Bagaimana menemukan profesional kesehatan mental yang tepat?",
+      "kategori": "Profesional Kesehatan Mental",
+      "next": "Autis"
+    },
+    {
+      "id": 126,
+      "text": "Autis itu apa artinya?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 127,
+      "text": "Apa itu autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 128,
+      "text": "Pengertian dari autis",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 129,
+      "text": "Autis adalah?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 130,
+      "text": "Anak autis disebabkan oleh apa?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 131,
+      "text": "Apa penyebab autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 132,
+      "text": "Kenapa bisa autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 133,
+      "text": "Gejala autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 134,
+      "text": "Kapan gejala autis muncul?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 135,
+      "text": "Usia gejala autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 136,
+      "text": "Pencegahan autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 137,
+      "text": "Cara mencegah terjadi autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 138,
+      "text": "Bagaimana mencegah terjadinya autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 139,
+      "text": "Bagaimana cara menyembuhkan anak autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 140,
+      "text": "Apakah autis bisa diobati?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 141,
+      "text": "Cara pengobatan anak autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 142,
+      "text": "Apa dampak autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 143,
+      "text": "Dampak dari autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 144,
+      "text": "Anak autis IQ-nya berapa?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 145,
+      "text": "Berapa IQ anak autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 146,
+      "text": "Seberapa tinggi IQ anak autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 147,
+      "text": "Apakah autis itu menular?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 148,
+      "text": "Bisakah autis menular?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 149,
+      "text": "Apakah anak autis bisa jatuh cinta?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 150,
+      "text": "Bisakah anak autis merasakan jatuh cinta?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 151,
+      "text": "Kenapa anak autis lebih pintar?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 152,
+      "text": "Apakah anak autis pintar?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 153,
+      "text": "Apa kelebihan anak autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 154,
+      "text": "Kelebihan anak autis",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 155,
+      "text": "Berapa lama hidup orang autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 156,
+      "text": "Batas usia orang autis?",
+      "kategori": "Autis",
+      "next": "Autis"
+    },
+    {
+      "id": 157,
+      "text": "Apakah autis punya batas usia?",
+      "kategori": "Autis",
+      "next": "Autis"
+    }
+  ]
+}
